@@ -1,7 +1,7 @@
 /**
  * 메인 페이지(MainPage) 컴포넌트
  */
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Sparkles } from 'lucide-react';
 import { getTheme } from '../../components/Main/Mode'; 
 import type { Mode } from '../../components/Main/Types'; 

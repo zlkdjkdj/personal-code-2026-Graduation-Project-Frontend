@@ -1,5 +1,5 @@
 //데이터 구조와 인터페이스 정의
-import React from 'react';
+
 
 export type Mode = 'edu' | 'fitness' | 'community';
 export type BodyPart = '가슴' | '등' | '어깨' | '이두' | '삼두' | '하체' | '복근';

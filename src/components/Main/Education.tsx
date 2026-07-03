@@ -1,5 +1,5 @@
 // 학습(Education) 섹션 컴포넌트
-import React from 'react';
+
 import { 
   BookOpen, Upload, Loader2, Sparkles, Flag, Zap, 
   CheckCircle, Calendar, Trash2, Plus, Brain, 

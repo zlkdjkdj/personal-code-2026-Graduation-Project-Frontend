@@ -1,5 +1,5 @@
 // 대시보드 메인 레이아웃 구성 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useSchedule } from '../../utils/useSchedule'; 
 import { useWeather } from '../../utils/Weather'; 
 import { Sidebar } from '../../../src/components/Tab/Sidebar';

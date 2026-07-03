@@ -1,9 +1,7 @@
-//운동 섹션 컴포넌트
-import React from 'react';
 import { Flame, Clock, Scale, Dumbbell, Save, Trash2 } from 'lucide-react';
 import { SectionHeading, StatCard } from './CommonDesign';
 import { getTheme, BODY_PARTS, FITNESS_SUGG_STYLE } from './Mode';
-import { useFitness } from '../../utils/Main/usefitness';
+import { useFitness } from '../../utils/Main/useFitness';
 
 export function Fitness({ dark, earnPoints }: { dark: boolean; earnPoints: () => void }) {
   const t = getTheme(dark);
@@ -62,7 +60,7 @@ export function Fitness({ dark, earnPoints }: { dark: boolean; earnPoints: () =>
           {state.fitSugg.length > 0 && (
             <div className={`pt-5 border-t ${t.divider} space-y-3`}>
               <p className={`text-[11px] font-black uppercase tracking-widest ${t.label}`}>AI 코치 피드백</p>
-              {state.fitSugg.map(s => {
+              {state.fitSugg.map((s: { id: number; type: 'praise' | 'improve' | 'recovery' | 'caution'; title: string; body: string }) => {
                 const style = FITNESS_SUGG_STYLE[s.type];
                 return (
                   <div key={s.id} className={`p-4 rounded-2xl border ${style.border} flex items-start gap-3`}>
@@ -103,7 +101,7 @@ export function Fitness({ dark, earnPoints }: { dark: boolean; earnPoints: () =>
           <div className={`pt-5 border-t ${t.divider}`}>
             <p className={`text-[11px] font-black uppercase tracking-widest ${t.label} mb-4`}>최근 체중 추이</p>
             <div className="flex items-end justify-between gap-2 h-28">
-              {stats.weightLog.map((w, i) => (
+              {stats.weightLog.map((w: { weight: number; date: string }, i: number) => (
                 <div key={i} className="flex-1 flex flex-col items-center gap-1.5 group relative">
                   {/* 체중 값에 따른 막대 높이 조절 로직 */}
                   <div 

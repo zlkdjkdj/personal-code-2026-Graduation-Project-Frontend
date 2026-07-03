@@ -1,5 +1,5 @@
 // 프로젝트 전역 테마 설정, 상수 및 스타일 정보 관리
-import React from 'react';
+
 import { Lightbulb, AlertCircle, Zap, Calendar, Award, TrendingUp, Activity } from 'lucide-react';
 import type { BodyPart, StudySuggestion, FitnessSuggestion } from './Types';
 

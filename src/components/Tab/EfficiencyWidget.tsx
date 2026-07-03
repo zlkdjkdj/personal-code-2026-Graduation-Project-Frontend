@@ -1,8 +1,16 @@
-// src/components/Tab/EfficiencyWidget.jsx
-import React from 'react';
+interface EfficiencyWidgetProps {
+  stats: {
+    totalRate: number;
+    [key: string]: any;
+  };
+  theme: {
+    card: string;
+    [key: string]: any;
+  };
+  isDark: boolean;
+}
 
-// stats, theme, isDark 
-export const EfficiencyWidget = ({ stats, theme, isDark }) => {
+export const EfficiencyWidget = ({ stats, theme, isDark }: EfficiencyWidgetProps) => {
   return (
     <div className={`${theme.card} p-8 rounded-[2.5rem] border backdrop-blur-sm`}>
       <span className="text-[10px] font-bold uppercase tracking-widest opacity-40 mb-4 block">

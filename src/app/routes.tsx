@@ -3,7 +3,7 @@ import { LandingPage } from "../pages/home/Home";
 import { MainPage } from "../pages/main/ModePage";
 import { SignupPage } from "../pages/auth/Signup";
 import { LoginPage } from "../pages/auth/Login";
-import { TabPage } from "../pages/main/Tab";
+import { TabPage } from "../pages/main/tab";
 
 
 export const router = createBrowserRouter([

@@ -1,7 +1,7 @@
 // 회원가입 페이지
 import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router';
-import { Mail, User, Lock, Check, X, Eye, EyeOff, Loader2, AlertCircle, Sparkles } from 'lucide-react';
+import { Link } from 'react-router';
+import { Mail, User, Lock, Check, Eye, EyeOff, Loader2, Sparkles } from 'lucide-react';
 
 // 유효성 검사 정규식
 const REGEX = {
@@ -12,21 +12,26 @@ const REGEX = {
 
 // 가짜 API
 const mockApi = {
-  checkEmail: (email: string) => new Promise(res => setTimeout(() => res(false), 600)),
-  checkName: (name: string) => new Promise(res => setTimeout(() => res(false), 600)),
+  checkEmail: (_email: string) => new Promise(res => setTimeout(() => res(false), 600)),
+  checkName: (_name: string) => new Promise(res => setTimeout(() => res(false), 600)),
   register: () => new Promise(res => setTimeout(() => res({ success: true }), 1500))
 };
 
 
 export function SignupPage() {
-  const navigate = useNavigate();
-
   const [formData, setFormData] = useState({ email: '', username: '', password: '', confirm: '' });
-  const [validity, setValidity] = useState({ email: null, name: null, pw: null, match: null });
-  const [duplicates, setDuplicates] = useState({ email: null, name: null });
+  const [validity, setValidity] = useState<{
+    email: boolean | null;
+    name: boolean | null;
+    pw: boolean | null;
+    match: boolean | null;
+  }>({ email: null, name: null, pw: null, match: null });
+  const [duplicates, setDuplicates] = useState<{
+    email: boolean | null;
+    name: boolean | null;
+  }>({ email: null, name: null });
   const [loading, setLoading] = useState({ email: false, name: false, submit: false });
   const [shows, setShows] = useState({ pw: false, confirm: false });
-  const [msg, setMsg] = useState({ error: '', success: false });
 
   const { email, username, password, confirm } = formData;
 
