@@ -7,29 +7,29 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ variant = 'primary', children, className = '', ...props }: ButtonProps) {
   const baseStyle =
-    'rounded-2xl text-[0.65rem] font-black uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-2 outline-none active:scale-95';
+    'rounded-md text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 outline-none active:scale-[.98]';
 
   let variantStyle = '';
   switch (variant) {
     case 'primary':
       variantStyle =
-        'bg-black dark:bg-white text-white dark:text-black shadow-xl shadow-black/5 dark:shadow-white/5 hover:opacity-90';
+        'bg-[#0064E0] text-white shadow-sm hover:bg-[#0058C4]';
       break;
     case 'danger':
-      variantStyle = 'bg-rose-500 text-white shadow-xl shadow-rose-500/10 hover:bg-rose-600';
+      variantStyle = 'bg-[#FA383E] text-white shadow-sm hover:bg-[#d92f35]';
       break;
     case 'outline':
       variantStyle =
-        'bg-transparent border border-gray-100 dark:border-[#1a1a1a] text-gray-500 hover:text-black dark:hover:text-white hover:border-black dark:hover:border-white';
+        'bg-transparent border border-[#0064E0] text-[#0064E0] hover:bg-blue-50 dark:hover:bg-blue-950/30';
       break;
     case 'secondary':
       variantStyle =
-        'bg-gray-100 dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-[#27272a]';
+        'bg-[#E4E6EB] dark:bg-[#2D3A42] text-[#1C2B33] dark:text-white hover:bg-[#D8DADF]';
       break;
   }
 
   return (
-    <button className={`${baseStyle} ${variantStyle} py-4 px-8 ${className}`} {...props}>
+    <button className={`${baseStyle} ${variantStyle} py-2.5 px-4 ${className}`} {...props}>
       {children}
     </button>
   );

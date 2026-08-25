@@ -14,7 +14,7 @@ export function Card({ children, className = '', ...props }: React.HTMLAttribute
   return (
     // 컴포넌트별로 명확히 구분되게 그림자, 테두리, 배경색 강도 상향
     <div 
-      className={`bg-white dark:bg-[#070707] rounded-[2rem] border border-gray-200 dark:border-[#1f1f1f] shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] p-6 md:p-8 transition-shadow hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_8px_30px_rgb(0,0,0,0.4)] ${className}`} 
+      className={`bg-white dark:bg-[#2d3a42] rounded-xl border-0 shadow-[0_1px_2px_rgba(28,43,51,0.1)] p-4 md:p-6 transition-shadow hover:shadow-[0_4px_16px_rgba(28,43,51,0.12)] ${className}`} 
       {...props}
     >
       {children}
@@ -29,9 +29,9 @@ export function Card({ children, className = '', ...props }: React.HTMLAttribute
  */
 export function CardTitle({ children, className = '', icon }: { children: ReactNode; className?: string; icon?: ReactNode }) {
   return (
-    <h2 className={`text-xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-3 tracking-tight ${className}`}>
+    <h2 className={`text-lg font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-3 ${className}`}>
       {/* 아이콘이 있을 때만 렌더링, 배경 칩으로 감쌈 */}
-      {icon && <span className="p-2.5 bg-gray-100/50 dark:bg-white/5 backdrop-blur-md rounded-2xl text-gray-700 dark:text-gray-300 shadow-sm border border-black/5 dark:border-white/5">{icon}</span>}
+      {icon && <span className="p-2 bg-[#F0F2F5] dark:bg-[#465A69] rounded-lg text-[#0064E0]">{icon}</span>}
       {children}
     </h2>
   );

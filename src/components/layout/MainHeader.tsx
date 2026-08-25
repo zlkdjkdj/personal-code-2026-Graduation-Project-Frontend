@@ -204,12 +204,12 @@ export function MainHeader() {
     <>
       {/* ── 상위 헤더 : 로고 · 알림 · 다크모드 · 로그아웃 ── */}
       {/* 데스크탑에서는 스크롤 시 위로 사라짐(static), 모바일에서는 상단 고정(sticky) */}
-      <header className="lg:relative sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 transition-colors duration-200">
+      <header className="lg:relative sticky top-0 z-50 bg-white/95 dark:bg-[#1C2B33]/95 backdrop-blur border-b border-gray-200 dark:border-[#465A69] transition-colors duration-200">
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
 
           {/* 로고 */}
           <div className="flex items-center gap-3 cursor-pointer shrink-0" onClick={() => navigate('/')}>
-            <div className="w-10 h-10 bg-white dark:bg-slate-800 border border-gray-200/80 dark:border-transparent rounded-xl flex items-center justify-center shadow-sm shrink-0">
+            <div className="w-9 h-9 bg-white dark:bg-[#2D3A42] border border-gray-200 dark:border-[#465A69] rounded-lg flex items-center justify-center shadow-sm shrink-0">
               <img src={siteLogo} className="w-7.5 h-7.5 dark:invert" alt="Logo" />
             </div>
             <span className="text-xl font-extrabold tracking-tight [word-spacing:-0.15em] text-gray-900 dark:text-white hidden sm:block">Learn Time</span>

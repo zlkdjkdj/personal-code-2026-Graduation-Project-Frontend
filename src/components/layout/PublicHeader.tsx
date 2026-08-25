@@ -64,7 +64,7 @@ export function PublicHeader() {
           className="flex items-center gap-3 cursor-pointer"
           onClick={() => navigate('/')}
         >
-          <div className="w-9 h-9 bg-white dark:bg-slate-800 border border-gray-200/80 dark:border-transparent rounded-xl flex items-center justify-center shadow-lg shrink-0 transition-all duration-500">
+          <div className="w-9 h-9 bg-white border border-gray-200 rounded-lg flex items-center justify-center shadow-sm shrink-0 transition-all duration-300">
             <img src={siteLogo} className="w-7 h-7 dark:invert transition-all duration-500" alt="Logo" />
           </div>
           <span className={`text-xl font-extrabold tracking-tight [word-spacing:-0.15em] hidden sm:block transition-colors duration-500 ${logoText}`}>

@@ -21,12 +21,12 @@ export default function BaseModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/25 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#1C2B33]/60 p-4"
       onClick={onClose}
       id="base-modal-backdrop"
     >
       <div
-        className="bg-white dark:bg-[#111] dark:border dark:border-[#222] rounded-xl shadow-xl w-full max-w-sm p-6 relative"
+        className="bg-white dark:bg-[#2D3A42] rounded-xl shadow-[0_12px_28px_rgba(28,43,51,.2)] w-full max-w-sm p-6 relative"
         onClick={(e) => e.stopPropagation()}
         id="base-modal-content"
       >

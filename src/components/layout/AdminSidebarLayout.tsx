@@ -57,7 +57,7 @@ export function AdminSidebarLayout({ children }: AdminSidebarLayoutProps) {
                 onClick={() => navigate(item.path)}
                 className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all group ${
                   isActive 
-                    ? 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 font-bold' 
+                    ? 'bg-blue-50 dark:bg-blue-950/30 text-[#0064E0] dark:text-[#0082FB] font-semibold' 
                     : 'text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-[#1a1a1a] hover:text-gray-900 dark:hover:text-white font-medium'
                 } ${!isExpanded && 'justify-center'}`}
                 title={!isExpanded ? item.name : undefined}

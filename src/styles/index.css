@@ -25,3 +25,13 @@
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1.5rem;
 }
+
+/* LearnTime visual system: quiet surfaces, clear hierarchy, restrained depth. */
+body { min-width: 320px; background: var(--background); color: var(--foreground); font-family: 'Optimistic Text', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid #4aa99b; outline-offset: 2px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background-color: #bcc0c4; border-radius: 3px; }
+.dark .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #465a69; }
+.app-page, main { background: var(--background); }
+[class*="rounded-3xl"], [class*="rounded-[2rem]"], [class*="rounded-full"] { border-radius: 8px; }
+[class*="shadow-xl"], [class*="shadow-2xl"], [class*="shadow-lg"] { box-shadow: 0 4px 16px rgba(28,43,51,.12); }

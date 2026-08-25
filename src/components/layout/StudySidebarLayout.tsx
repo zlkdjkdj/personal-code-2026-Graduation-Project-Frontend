@@ -120,7 +120,7 @@ export function StudySidebarLayout({ children }: StudySidebarLayoutProps) {
                     {/* 스터디 항목 행 */}
                     <div className={`flex items-center rounded-xl transition-all duration-200 group/item
                       ${isActive
-                        ? 'bg-indigo-50 dark:bg-indigo-950/40'
+                        ? 'bg-blue-50 dark:bg-blue-950/30'
                         : 'hover:bg-gray-50 dark:hover:bg-[#111]'
                       }
                       ${isExpanded ? '' : 'justify-center'}
@@ -233,7 +233,7 @@ export function StudySidebarLayout({ children }: StudySidebarLayoutProps) {
       )}
 
       {/* 우측 메인 컨텐츠 영역 */}
-      <main className="flex-1 p-4 lg:p-8 bg-gray-50/30 dark:bg-[#020202] w-full relative min-h-[calc(100vh-64px)]">
+      <main className="flex-1 p-4 lg:p-8 bg-[#F0F2F5] dark:bg-[#1C2B33] w-full relative min-h-[calc(100vh-64px)]">
         {/* 모바일 전용 햄버거 메뉴 띄우기 버튼 */}
         <button 
           onClick={() => setIsExpanded(true)}

@@ -29,7 +29,7 @@ export function FieldInput({
       </label>
       {/* 스타일 적용 입력 필드 */}
       <input
-        className={`w-full bg-gray-50 dark:bg-[#050505] border border-gray-100 dark:border-[#1a1a1a] rounded-2xl p-4 text-sm font-black outline-none focus:ring-2 ${focusColor} transition-all ${className}`}
+        className={`w-full bg-white dark:bg-[#2d3a42] border border-[#CED0D4] dark:border-[#465A69] rounded-lg px-3.5 py-3 text-[15px] outline-none focus:ring-2 ${focusColor} transition-all ${className}`}
         {...props}
       />
     </div>
